@@ -1,0 +1,159 @@
+*{
+    padding:0;
+    margin:0;
+    font-family:helvetica;
+    font-size:15px;
+}
+
+body{
+    height:100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("./asset/day.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    transition:1s;
+}
+body:hover{
+    background-position:top;
+}
+.box_clima{
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+    box-sizing: border-box;
+}
+.clima{
+    background:rgba(232, 232, 232, 0.643);
+    border-radius:0px 0px 30px 0px;
+    padding:50px 80px;
+    width:380px;
+    color:rgb(92, 92, 92);
+    overflow:hidden; /*   si quito el overflow */
+}
+.clima:before{
+    content:"";
+    width:400px;
+    height:400px;
+    background:rgba(159, 159, 159, 0.372);
+    border-radius:50%;
+    position:absolute;
+    top:-150px;
+    left:-150px;
+    z-index:-1;
+}
+.clima h2{
+    font-size:11em;
+    text-align:center;
+    transition:1s;
+}
+.clima h1{
+    font-size:4em;
+}
+.clima h6{
+    font-size:3em;
+    margin:100px 0px;
+}
+.clima p{
+    padding:7px 0px;
+    font-size:1.5em;
+}
+.max_min{
+    display:flex;
+    justify-content:space-between;
+    margin:50px 0px;
+}
+.max_min h3{
+    text-align:center;
+    font-size:4em;
+    line-height:45px;
+}
+.max_min span{
+    font-size:0.55em;
+    font-weight:normal;
+}
+
+.temperatura{
+    display:flex;
+    align-items:center;
+    height:25vh;
+    margin:20px 50px;
+    width:550px;
+}
+.temperatura p{
+    font-size:80px;
+    margin:0px 20px;
+    font-weight:bold;
+    color:#f5f5f5;
+}
+img{
+    width:120px;
+    height:120px;
+    background:rgba(142, 221, 255, 0.643);
+    padding:20px;
+    border-radius:50%;
+}
+.buscador{
+    display:flex;
+    justify-content:space-between;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    margin:auto;
+    position:absolute;
+    bottom:0;
+    padding:30px;
+}
+input{
+    margin:0px 10px;
+    width:30%;
+    padding:10px;
+    font-size:22px;
+    border:0;
+    border-radius:10px;
+    outline:none;
+}
+button{
+    background:white;
+    padding:10px;
+    font-size:20px;
+    border:0;
+    border-radius:10px;
+    margin-right:10px;
+}
+
+@media(max-width:800px){
+    .clima{
+        zoom:0.7;
+        border-radius:0px 0px 30px 30px;
+        text-align:center;
+        padding:60px 80px;
+    }
+    .buscador{
+        padding:10px 0px;
+        background:rgba(229, 229, 229, 0.753);
+    }
+    input{
+        width:100%;
+    }
+    .temperatura{
+        margin:0px 20px;
+        height:18vh;
+        justify-content: center;
+        width:350px;
+    }
+    .temperatura p{
+        font-size:30px;
+        width:150px;
+    }
+    img{
+        width:70px;
+        height:70px;
+        padding:7px;
+    }
+    .box_clima{
+        justify-content:center;
+    }
+    .max_min{
+        margin:60px 0px;
+    }
+}
